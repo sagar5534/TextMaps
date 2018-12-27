@@ -1,0 +1,6 @@
+framework module Pods_TextMaps {
+  umbrella header "Pods-TextMaps-umbrella.h"
+
+  export *
+  module * { export * }
+}
