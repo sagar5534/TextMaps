@@ -1,0 +1,23 @@
+{
+  "name": "sagar/textmaps",
+  "version": "0.0.0",
+  "description": "",
+  "author": "sagar",
+  "main": "functions/__main__.js",
+  "dependencies": {
+    "lib": "^3.0.2",
+    "request-promise": "^4.2.2",
+    "bluebird": "^3.5.3",
+    "request": "^2.88.0"
+  },
+  "private": true,
+  "stdlib": {
+    "build": "faaslang",
+    "name": "sagar/textmaps",
+    "timeout": 10000,
+    "personalize": {
+      "keys": [],
+      "user": []
+    }
+  }
+}
