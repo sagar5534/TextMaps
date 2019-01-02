@@ -13,10 +13,12 @@ var reqProm = require('request-promise');
 const Promise = require('bluebird');
 const sms = lib.utils.sms['@1.0.9'];
 
-module.exports = async (sender = "", start = "", end = "", method = "", context) => {
+module.exports = async (sender = "", startDir = "", endDir = "", method = "", context) => {
 
     //process start
+    let start = startDir
     start = start.replace(/,/g, '+')
+    let end = endDir
     end = end.replace(/,/g, '+')
 
     //Enter Google Maps Api in env.json
@@ -53,12 +55,11 @@ module.exports = async (sender = "", start = "", end = "", method = "", context)
       })
       
       
-      
     //Send Text
     let result = await sms({
       to: sender, // (required)
-      body: ((JSON.stringify(res,null,2)).slice(1, -1)).replace(/\"[]/g, "") // (required)
+      body: "Directions from: " + startDir + "\nTo: " + endDir + "\n" + ((JSON.stringify(res,null,2)).slice(1, -1)).replace(/\"[]/g, "") // (required)
     });
     
-    return process.env.token
+    return result
 };
