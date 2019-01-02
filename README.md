@@ -6,5 +6,5 @@ Textmaps utilizes the Google Maps Api to ensure users get the most updated and f
 Backend is supported with STDLIB which runs as a serverless application while accessing various API's. 
 
 <p align="left">
-<img src="Temp/Iphone.png" width="500" title="Screenshot">
+<img src="Temp/Screenshot.png" width="500" title="Screenshot">
 </p
