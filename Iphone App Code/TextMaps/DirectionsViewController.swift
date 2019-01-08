@@ -66,7 +66,7 @@ class DirectionsViewController: UIViewController, UITextFieldDelegate {
             //If Correct textfields
             print("Sending");
             
-            let sender = "16476298391";
+            //let sender = "16476298391";
             
             var start = startTxt.text!
             start = start.replacingOccurrences(of: " ", with: "+")
@@ -78,8 +78,8 @@ class DirectionsViewController: UIViewController, UITextFieldDelegate {
             end = end.replacingOccurrences(of: ",", with: "+")
             end = end.replacingOccurrences(of: "++", with: "+")
             
-            var url = "https://sagar.lib.id/textmaps@dev/?sender=16476298391&start=";
-            url = url + start + "&end=";
+            var url = "https://sagar.lib.id/textmaps@dev/?sender=16476298391&startDir=";
+            url = url + start + "&endDir=";
             url = url + end;
             url = url + "&method=drive";
             
